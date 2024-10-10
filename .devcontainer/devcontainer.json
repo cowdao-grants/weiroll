@@ -11,8 +11,5 @@
 				"JuanBlanco.solidity"
 			]
 		}
-	},
-	"runArgs": [
-		"--network=host"
-	]
+	}
 }
