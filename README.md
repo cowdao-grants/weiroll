@@ -1,19 +1,18 @@
-## Foundry
+# Weiroll
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Weiroll is a flexible execution system designed to enable trust-minimized and gas-efficient scripting on Ethereum. This repository builds upon the original concept of weiroll with a simple self-contained deployment.
 
-Foundry consists of:
+## Acknowledgements
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+This repository owes its origins to the pioneering work done by the original [weiroll](https://github.com/weiroll/weiroll) project.
+
+In addition, we also acknowledge the innovative team behind [Enso Finance's fork of weiroll](https://github.com/enso-finance/enso-weiroll).
 
 ## Documentation
 
-https://book.getfoundry.sh/
+Detailed documentation on the Weiroll project can be found in the aforementioned repositories.
 
-## Usage
+## Development
 
 ### Build
 
@@ -33,34 +32,22 @@ $ forge test
 $ forge fmt
 ```
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
 ### Deploy
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+All contracts in this repo can be deployed and verified on the block explorer as follows:
+
+```sh
+export ETHERSCAN_API_KEY='your API key here'
+PK='the private key of the deployer'
+ETH_RPC_URL='https://rpc.node.url.here.example.com'
+forge script 'script/DeployableVM.s.sol:DeployableVMScript' -vvvv --rpc-url "$ETH_RPC_URL" --private-key "$PK" --verify --broadcast
 ```
 
-### Cast
+### Deployment addresses
 
-```shell
-$ cast <subcommand>
-```
+The file [`networks.json`](./networks.json) lists all official deployments of the contracts in this repository by chain id.
 
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+The deployment address file is generated with:
+```sh
+bash dev/generate-networks-file.sh > networks.json
 ```
