@@ -1,0 +1,20 @@
+{
+  "DeployableVM": {
+    "1": {
+      "address": "0x9585c3062Df1C247d5E373Cfca9167F7dC2b5963",
+      "transactionHash": "0x6e22d6584ebfad16a5d222ae5e52c901b8a2a90f4948e41fc573b4c3f37adbe7"
+    },
+    "100": {
+      "address": "0x9585c3062Df1C247d5E373Cfca9167F7dC2b5963",
+      "transactionHash": "0xb22e5bedb95ed7c97308326c14b4ad9211a4f3d433839c0145ba233c402f07c1"
+    },
+    "11155111": {
+      "address": "0x9585c3062Df1C247d5E373Cfca9167F7dC2b5963",
+      "transactionHash": "0x5d873b89646e5b7947242ad3ef1e5b32394c6277b31162127e7a87356afb347e"
+    },
+    "42161": {
+      "address": "0x9585c3062Df1C247d5E373Cfca9167F7dC2b5963",
+      "transactionHash": "0xf873b1ec29c2f57f18f99ce8762624bc1c82a0ca8a91bd64cf94af92254f41b8"
+    }
+  }
+}
