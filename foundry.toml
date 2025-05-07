@@ -7,6 +7,7 @@ libs = ["lib"]
 via_ir = true
 optimizer = true
 optimizer_runs = 1000000
+solc = "0.8.27"
 
 [fmt]
 sort_imports = true
