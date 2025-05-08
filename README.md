@@ -59,15 +59,19 @@ forge script 'script/DeployableVM.s.sol:DeployableVMScript' -vvvv --rpc-url "$ET
 
 All contracts in this repo can be deployed and verified on the block explorer as follows:
 
-```sh
+```shell
 forge script 'script/DeployableVM.s.sol:DeployableVMScript' -vvvv --rpc-url "$ETH_RPC_URL" --private-key "$PK" --verify --broadcast
 ```
 
-### 7. Deployment addresses
+### 7. Commit the deployment file
+
+After successfully deploying the contracts, a deployment file is automatically generated in the [./broadcast/DeployableVM.s.sol](broadcast/DeployableVM.s.sol) directory under the relevant chain subdirectory. Make sure to commit this file to the repository.
+
+### 8. Deployment addresses
 
 The file [`networks.json`](./networks.json) lists all official deployments of the contracts in this repository by chain id.
 
 The deployment address file is generated with:
-```sh
+```shell
 bash dev/generate-networks-file.sh > networks.json
 ```
