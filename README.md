@@ -47,7 +47,7 @@ forge fmt
 export ETHERSCAN_API_KEY='your API key here' # required only for etherscan based explorers
 export PK='the private key of the deployer'
 export ETH_RPC_URL='https://rpc.node.url.here.example.com'
-````
+```
 
 ### 5. Verify deterministic address
 
