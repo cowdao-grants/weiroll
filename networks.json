@@ -23,6 +23,10 @@
     "43114": {
       "address": "0x9585c3062df1c247d5e373cfca9167f7dc2b5963",
       "transactionHash": "0x6a5b973914929e0bc4019ee1a9aab99cfbcf1630722c663365459e88bcbf65c1"
+    },
+    "8453": {
+      "address": "0x9585c3062df1c247d5e373cfca9167f7dc2b5963",
+      "transactionHash": "0xe4de4c19b497233a337dd00b51543cd148fad25e86378a2d0d1f54e7e06cf00c"
     }
   }
 }
