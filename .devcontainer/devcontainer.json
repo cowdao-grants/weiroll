@@ -1,12 +1,14 @@
 {
 	"name": "Foundry + Node",
-	"image": "mcr.microsoft.com/devcontainers/base:0",
+	"image": "mcr.microsoft.com/devcontainers/base:1",
 	"features": {
-		"ghcr.io/nlordell/features/foundry": {},
+		"ghcr.io/nlordell/features/foundry": {
+			"version": "nightly-cb9dfae298fe0b5a5cdef2536955f50b8c7f0bf5"
+		},
 		"ghcr.io/devcontainers/features/node:1": {}
 	},
 	"customizations": {
-		"vscode" : {
+		"vscode": {
 			"extensions": [
 				"JuanBlanco.solidity"
 			]
