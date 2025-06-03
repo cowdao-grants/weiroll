@@ -63,15 +63,19 @@ All contracts in this repo can be deployed and verified on the block explorer as
 forge script 'script/DeployableVM.s.sol:DeployableVMScript' -vvvv --rpc-url "$ETH_RPC_URL" --private-key "$PK" --verify --broadcast
 ```
 
-### 7. Commit the deployment file
-
-After successfully deploying the contracts, a deployment file is automatically generated in the [./broadcast/DeployableVM.s.sol](broadcast/DeployableVM.s.sol) directory under the relevant chain subdirectory. Make sure to commit this file to the repository.
-
-### 8. Deployment addresses
+### 7. Deployment addresses
 
 The file [`networks.json`](./networks.json) lists all official deployments of the contracts in this repository by chain id.
+Update it by adding address and transaction hash for the new chain.
 
-The deployment address file is generated with:
-```shell
-bash dev/generate-networks-file.sh > networks.json
+You can extract the information you need from the automatically generated deployment file in the [./broadcast/DeployableVM.s.sol](broadcast/DeployableVM.s.sol) directory with the following command.
+
+```sh
+chain_id=$(cast chain-id --rpc-url "$ETH_RPC_URL")
+jq --arg chainId "$chain_id" '
+  .transactions[]
+  | select(.transactionType == "CREATE2")
+  | select(.hash != null)
+  | {($chainId): {address: .contractAddress, transactionHash: .hash }}
+'  <"./broadcast/DeployableVM.s.sol/${chain_id}/run-latest.json"
 ```
