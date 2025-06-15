@@ -6,7 +6,7 @@ Weiroll is a flexible execution system designed to enable trust-minimized and ga
 
 This repository owes its origins to the pioneering work done by the original [weiroll](https://github.com/weiroll/weiroll) project.
 
-In addition, we also acknowledge the innovative team behind [Enso Finance's fork of weiroll](https://github.com/enso-finance/enso-weiroll).
+In addition, we also acknowledge the innovative team behind [Enso's (enso.build) fork of weiroll](https://github.com/EnsoBuild/enso-weiroll).
 
 ## Documentation
 
