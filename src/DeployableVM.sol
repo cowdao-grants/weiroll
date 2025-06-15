@@ -6,8 +6,8 @@ import {VM as WeirollVM} from "lib/enso-weiroll/contracts/VM.sol";
 /**
  * @title DeployableVM for arbitrary contracts wanting to use Weiroll's VM.
  * @author CoW Protocol Developers
- * @dev This contract makes use of Enso Finance's audited Weiroll VM contract available
- *      at: https://github.com/EnsoFinance/enso-weiroll. The original Weiroll is
+ * @dev This contract makes use of Enso's (enso.build) audited Weiroll VM contract available
+ *      at: https://github.com/EnsoBuild/enso-weiroll. The original Weiroll is
  *      available at: https://github.com/weiroll/weiroll.
  */
 contract DeployableVM is WeirollVM {
